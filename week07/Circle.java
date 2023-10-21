@@ -10,10 +10,8 @@ public class Circle extends GeometricObject {
     }
 
     public Circle(double radius, String color, boolean filled) {
-//        super(color, filled);
+        super(color, filled);
         this.radius = radius;
-        setColor(color);
-        setFilled(filled);
     }
 
     /**
@@ -59,5 +57,10 @@ public class Circle extends GeometricObject {
 
     public String toString() {
         return super.toString() + "\nradius is " + radius;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return ((Circle)o).radius == this.radius;
     }
 }
