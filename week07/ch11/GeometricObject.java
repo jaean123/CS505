@@ -62,6 +62,7 @@ public class GeometricObject {
     /**
      * Return a string representation of this object
      */
+    @Override
     public String toString() {
         return "createtion date: " + dateCreated + ", color: " + color +
                 ", filled: " + filled;

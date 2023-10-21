@@ -10,12 +10,12 @@ public class House implements Cloneable, Comparable<House> {
 
     private int id;
     private double area;
-    private java.util.Date whenBuilt;
+    private Date whenBuilt;
 
     public House(int id, double area) {
         this.id = id;
         this.area = area;
-        whenBuilt = new java.util.Date();
+        whenBuilt = new Date();
     }
 
     public int getId() {
@@ -30,31 +30,13 @@ public class House implements Cloneable, Comparable<House> {
         return whenBuilt;
     }
 
-//    @Override
-//    public Object clone() {
-//        try {
-//            return super.clone();
-//        }
-//        catch (CloneNotSupportedException ex) {
-//            return null;
-//        }
-//    }
-
-//    @Override
-//    public Object clone() throws CloneNotSupportedException {
-//        House houseClone = (House)super.clone();
-//        // Deep copy on Date object
-//        houseClone.whenBuilt = (java.util.Date)(whenBuilt.clone());
-//        return houseClone;
-//    }
-
     @Override
     public Object clone() {
         // Perform a shallow copy
         try {
             House houseClone = (House)super.clone();
             // Deep copy on Date object
-            houseClone.whenBuilt = (java.util.Date)(whenBuilt.clone());
+            houseClone.whenBuilt = (Date)(whenBuilt.clone());
             return houseClone;
         }
         catch (CloneNotSupportedException ex) {

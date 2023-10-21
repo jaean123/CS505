@@ -55,6 +55,7 @@ public class Circle extends GeometricObject {
                 " and the radius is " + radius);
     }
 
+    @Override
     public String toString() {
         return "circle - " + super.toString() + ", radius: " + radius;
     }
