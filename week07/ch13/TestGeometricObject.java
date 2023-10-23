@@ -7,6 +7,15 @@ public class TestGeometricObject {
 
         displayGeometricObject(geoObject1);
         displayGeometricObject(geoObject2);
+
+        GeometricObject[] geoObjects = new GeometricObject[3];
+        geoObjects[0] = new Circle(3);
+        geoObjects[1] = new Rectangle(5, 3);
+        geoObjects[2] = new Circle(10);
+
+        displayGeometricObject(geoObjects[0]);
+        displayGeometricObject(geoObjects[1]);
+        displayGeometricObject(geoObjects[2]);
     }
 
     public static boolean equalArea(GeometricObject object1, GeometricObject object2) {
