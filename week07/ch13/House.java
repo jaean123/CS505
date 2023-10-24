@@ -32,9 +32,10 @@ public class House implements Cloneable, Comparable<House> {
 
     @Override
     public Object clone() {
-        // Perform a shallow copy
         try {
+            // Perform a shallow copy
             House houseClone = (House)super.clone();
+
             // Deep copy on Date object
             houseClone.whenBuilt = (Date)(whenBuilt.clone());
             return houseClone;
