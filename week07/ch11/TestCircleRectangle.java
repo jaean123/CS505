@@ -1,6 +1,5 @@
 public class TestCircleRectangle {
     public static void main(String[] args) {
-        Object obj = new Circle(); // Implicit casting.
         Object o = new GeometricObject();
         System.out.println(o.toString());
         Circle circle = new Circle(1);
