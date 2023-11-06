@@ -1,5 +1,7 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 
 public class ComparatorDemo {
     public static void main(String[] args) {
@@ -16,11 +18,19 @@ public class ComparatorDemo {
                 new Stick(2.5),
                 new Stick(1.0)
         };
+        ArrayList<Stick> stickArrayList = new ArrayList<>(List.of(sticks));
+
         System.out.println("\nsticks[] before sorting:");
         printArray(sticks);
-        Arrays.sort(sticks, new StickComparator());
+        Arrays.sort(sticks, new StickComparator());  // Using comparator to sort sticks[] array
         System.out.println("\nsticks[] after sorting:");
         printArray(sticks);
+
+        System.out.println("\nstickArrayList before sorting");
+        System.out.println(stickArrayList);
+        System.out.println("\nsticksArrayList after sorting");
+        stickArrayList.sort(new StickComparator());  // Using comparator to sort stickArrayList
+        System.out.println(stickArrayList);
     }
 
     public static void printArray(Object[] array) {
