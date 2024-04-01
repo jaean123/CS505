@@ -16,11 +16,9 @@ public class MapDemo {
         Integer ageOfBob = hashMap.get("Bob");
         System.out.println("Bob's Age: " + ageOfBob);
 
-        // Iterating over the entry set of the map
-        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
-            String key = entry.getKey();
-            Integer value = entry.getValue();
-            System.out.println(key + " => " + value);
+        // Iterating through each entry in the map
+        for (String key : hashMap.keySet()) {
+            System.out.println(key + " => " + hashMap.get(key));
         }
 
         // Checking if a key exists in the map
