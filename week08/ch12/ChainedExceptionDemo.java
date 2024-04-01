@@ -4,6 +4,8 @@ public class ChainedExceptionDemo {
             method1();
         }
         catch(Exception ex) {
+            System.out.println("Message: " + ex.getMessage());
+            System.out.println("Cause: " + ex.getCause());
             ex.printStackTrace();
         }
     }
