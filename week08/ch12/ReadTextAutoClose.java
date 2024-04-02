@@ -14,5 +14,8 @@ public class ReadTextAutoClose {
                 System.out.println(line);
             }
         }
+        catch (FileNotFoundException ex) {
+            System.out.println("File not found");
+        }
     }
 }
